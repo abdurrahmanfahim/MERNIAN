@@ -3,7 +3,7 @@ import SideNav from "./SideNav";
 
 const Sidebar = () => {
   return (
-    <div className="w-[300px] ">
+    <div className="w-[300px] bg-white ">
       <div>
         <div className="w-full h-[75px] flex justify-center items-center bg-[#45437F] relative  ">
           <img
@@ -49,7 +49,7 @@ const Sidebar = () => {
           </div>
         </div>
 
-        <div className="flex mt-16 w-full ml-6 mr-2  ">
+        <div className="flex mt-16 w-[268px] ml-6 mr-2  ">
           <SideNav />
         </div>
       </div>

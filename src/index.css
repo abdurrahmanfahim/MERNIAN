@@ -13,3 +13,8 @@
 li:has(> a.sideNav):hover .sideNavIcon path {
   fill: white;
 }
+
+body {
+  @apply bg-[#F7F7FB]
+}
+

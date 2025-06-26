@@ -6,7 +6,7 @@ const ActiveFriendBar = () => {
       picture: './images/activefriend.jpg',
   }));
   return (
-    <div className='w-20 '>
+    <div className='w-20 bg-white '>
       <div className='flex flex-col gap-2 mt-2 items-center  '>
         {activeFriends.map(item => (
           <span className='size-10' key={item.id}>
