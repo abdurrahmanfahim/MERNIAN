@@ -40,7 +40,7 @@ const Navbar = () => {
         <div className="relative">
           <input
             type="text"
-            className="w-[415px] p-4 text-[#6965E0] bg-[#4E4AC8] rounded-[11px] text-sm  "
+            className="w-[415px] p-4 text-[#6965E0] bg-[#4E4AC8] rounded-[11px] text-sm focus:bg-white outline-0 "
             placeholder="Search here ...."
           />
           <span className=" absolute top-1/2 right-4 -translate-1/2 ">
@@ -53,17 +53,18 @@ const Navbar = () => {
           </div>
           <div className="bg-light w-[1px] h-8  "></div>
           <div className="flex gap-8 ">
-            <span className="relative">
+            <span className="relative h-auto">
               <CartIcon />
-              <span className="absolute right-[1px] bottom-0.5 "><CircleIcon /></span>
+              <span className="absolute top-[18.5%] left-[60%] -translate-1/2  "><p className="font-poppins text-[7px] font-bold text-[#615DFA] ">5</p></span>
             </span>
-            <span className="relative">
+            <span className="relative h-auto">
               <SmsIcon />
-              <span className="absolute right-[1px] bottom-0.5 "><CircleIcon /></span>
+              <span className="absolute -right-[1px] bottom-4.5 "></span>
+              
             </span>
-            <span className="relative">
+            <span className="relative h-auto">
               <BellICon />
-              <span className="absolute right-[1px] bottom-0.5 "><CircleIcon /></span>
+              <span className="absolute -right-[1px] bottom-4.5 "><CircleIcon /></span>
             </span>
           </div>
           <div className="bg-light w-[1px] h-8  "></div>
