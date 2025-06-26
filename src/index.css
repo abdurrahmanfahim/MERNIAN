@@ -1,9 +1,14 @@
 @import "tailwindcss";
 
+body {
+  @apply bg-[#F7F7FB]
+}
+
 @theme {
   --color-primary: #615dfa;
   --color-secondary: #23d2e2;
   --color-dark: #45437f;
+  --color-extraDark: #3E3F5E;
   --color-light: #7a77fd;
   --color-gray: #afb0c0;
 
@@ -14,7 +19,4 @@ li:has(> a.sideNav):hover .sideNavIcon path {
   fill: white;
 }
 
-body {
-  @apply bg-[#F7F7FB]
-}
 

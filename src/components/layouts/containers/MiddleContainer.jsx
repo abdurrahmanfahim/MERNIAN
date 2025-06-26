@@ -2,9 +2,7 @@ import React from 'react'
 
 const MiddleContainer = ({children}) => {
   return (
-    <div className='w-[1185px] '>
-      {children}
-    </div>
+    <div className='w-[586px] '>{children}</div>
   )
 }
 

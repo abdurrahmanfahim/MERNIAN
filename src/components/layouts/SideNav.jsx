@@ -10,7 +10,7 @@ import LogoutIcon from "../../icons/LogoutIcon";
 
 const SideNav = () => {
   return (
-    <ul className="w-full font-poppins font-medium text-sm text-gray capitalize flex flex-col gap-1 ">
+    <ul className="w-full h-dvh font-poppins font-medium text-sm text-gray capitalize flex flex-col gap-1 ">
       <li>
         <Link
           to={"/"}

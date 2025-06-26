@@ -33,7 +33,9 @@ const Navbar = () => {
   return (
     <header className="flex justify-between items-center bg-primary font-poppins text-white py-5 px-7 ">
       <div>
-        <img src="./images/logo/logo.png" alt="logo" />
+        <Link to={"/"}>
+          <img src="./images/logo/logo.png" alt="logo" />
+        </Link>
       </div>
       <div className="flex gap-20 items-center ">
         <nav className="font-poppins text-sm font-bold  ">
@@ -100,11 +102,11 @@ const Navbar = () => {
             <span className="relative  ">
               <Link to={"/"}>
                 <CartIcon />
-              <span className="absolute top-[44%] left-[60%] -translate-1/2  ">
-                <p className="font-poppins text-[7px] font-bold text-[#615DFA] ">
-                  5
-                </p>
-              </span>
+                <span className="absolute top-[44%] left-[60%] -translate-1/2  ">
+                  <p className="font-poppins text-[7px] font-bold text-[#615DFA] ">
+                    5
+                  </p>
+                </span>
               </Link>
             </span>
             <span className="relative  ">
