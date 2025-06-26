@@ -11,7 +11,9 @@ const CommonLayout = () => {
       <Navbar />
       <div className='flex justify-between '>
         <Sidebar />
-        <MiddleContainer />
+        <MiddleContainer>
+          <Outlet />
+        </MiddleContainer>
         <ActiveFriendBar />
       </div>
     </>

@@ -1,13 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #615DFA;
-  --color-secondary: #23D2E2;
-  --color-dark: #45437F;
-  --color-light: #7A77FD;
-  --color-gray: #AFB0C0;
+  --color-primary: #615dfa;
+  --color-secondary: #23d2e2;
+  --color-dark: #45437f;
+  --color-light: #7a77fd;
+  --color-gray: #afb0c0;
 
-  --font-poppins: "Poppins", "sans-serif"; 
-
+  --font-poppins: "Poppins", "sans-serif";
 }
 
+li:has(> a.sideNav):hover .sideNavIcon path {
+  fill: white;
+}
