@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import HamburgerMenu from "../../icons/HamburgerMenu";
 import EXP from "../EXP";
@@ -10,6 +10,26 @@ import SearchIcon from "../../icons/SearchIcon";
 import CircleIcon from "../../icons/CircleIcon";
 
 const Navbar = () => {
+  const [hamburgerMenuState, setHamburgerMenuState] = useState(false);
+  const hamburgerMenuRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutSide = (event) => {
+      if (
+        hamburgerMenuRef.current &&
+        !hamburgerMenuRef.current.contains(event.target)
+      ) {
+        setHamburgerMenuState(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutSide);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutSide);
+    };
+  }, []);
+
   return (
     <header className="flex justify-between items-center bg-primary font-poppins text-white py-5 px-7 ">
       <div>
@@ -18,10 +38,32 @@ const Navbar = () => {
       <div className="flex gap-20 items-center ">
         <nav className="font-poppins text-sm font-bold  ">
           <ul className="flex gap-12 ">
-            <li>
-              <Link to={"/"}>
+            <li className=" relative h-full">
+              <span
+                className="h-full "
+                ref={hamburgerMenuRef}
+                onClick={() => setHamburgerMenuState(!hamburgerMenuState)}
+              >
                 <HamburgerMenu />
-              </Link>
+              </span>
+
+              {hamburgerMenuState && (
+                <ul
+                  className="w-28 mt-8 absolute top-full bg-white shadow-2xl text-black  flex flex-col "
+                  ref={hamburgerMenuRef}
+                  onClick={() => setHamburgerMenuState(false)}
+                >
+                  <li className="hover:bg-gray-100 p-2 hover:text-primary border-r-2 border-transparent border-l-2 hover:border-secondary  ">
+                    one
+                  </li>
+                  <li className="hover:bg-gray-100 p-2 hover:text-primary border-r-2 border-transparent border-l-2 hover:border-secondary  ">
+                    two
+                  </li>
+                  <li className="hover:bg-gray-100 p-2 hover:text-primary border-r-2 border-transparent border-l-2 hover:border-secondary  ">
+                    three
+                  </li>
+                </ul>
+              )}
             </li>
             <li>
               <Link to={"/"}>Careers</Link>
@@ -49,27 +91,42 @@ const Navbar = () => {
         </div>
         <div className="flex gap-8 ">
           <div>
-            <EXP />
+            <Link to={"/"}>
+              <EXP />
+            </Link>
           </div>
           <div className="bg-light w-[1px] h-8  "></div>
-          <div className="flex gap-8 ">
-            <span className="relative h-auto">
-              <CartIcon />
-              <span className="absolute top-[18.5%] left-[60%] -translate-1/2  "><p className="font-poppins text-[7px] font-bold text-[#615DFA] ">5</p></span>
+          <div className="flex gap-8 items-center ">
+            <span className="relative  ">
+              <Link to={"/"}>
+                <CartIcon />
+              <span className="absolute top-[44%] left-[60%] -translate-1/2  ">
+                <p className="font-poppins text-[7px] font-bold text-[#615DFA] ">
+                  5
+                </p>
+              </span>
+              </Link>
             </span>
-            <span className="relative h-auto">
-              <SmsIcon />
+            <span className="relative  ">
+              <Link to={"/"}>
+                <SmsIcon />
+              </Link>
               <span className="absolute -right-[1px] bottom-4.5 "></span>
-              
             </span>
-            <span className="relative h-auto">
-              <BellICon />
-              <span className="absolute -right-[1px] bottom-4.5 "><CircleIcon /></span>
+            <span className="relative  ">
+              <Link to={"/"}>
+                <BellICon />
+              </Link>
+              <span className="absolute right-0 bottom-[2px] ">
+                <CircleIcon />
+              </span>
             </span>
           </div>
           <div className="bg-light w-[1px] h-8  "></div>
-          <div>
-            <ToolsIcon />
+          <div className="flex items-center ">
+            <Link to={"/"}>
+              <ToolsIcon />
+            </Link>
           </div>
         </div>
       </div>
