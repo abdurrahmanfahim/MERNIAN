@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body {
-  @apply bg-[#F7F7FB]
+  @apply bg-[#F7F7FB] relative
 }
 
 @theme {
@@ -13,6 +13,8 @@ body {
   --color-gray: #afb0c0;
 
   --font-poppins: "Poppins", "sans-serif";
+
+  --shadow-dropdown: 0px 1px 4px 1px rgba(0, 0, 0, 0.11);
 }
 
 li:has(> a.sideNav):hover .sideNavIcon path {

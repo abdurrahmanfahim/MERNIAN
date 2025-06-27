@@ -174,6 +174,7 @@ const NewsFeed = () => {
             />
 
             <PhotoVideoBox photos={photos} count={photos.length} />
+            <PhotoVideoBox videos={photos} verson="videos" count={photos.length} />
           </div>
         </LeftContainer>
         <MiddleContainer>2</MiddleContainer>
